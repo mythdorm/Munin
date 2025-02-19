@@ -12,13 +12,17 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Objects;
 import java.util.Scanner;
 
 public class DiscordBot{
     public static String getAPIKey(String fileName) {
-        File file = new File("/home/Nyth/Documents/Discord_Bot/src/main/java/" + fileName + ".txt");
+
         try {
+            File currentFile = new File(".");
+            String canonicalPath = currentFile.getCanonicalPath();
+            File file = new File(canonicalPath + "/src/main/java/" + fileName + ".txt");
             Scanner scanner = new Scanner(file);
             String APIkey = null;
             if (scanner.hasNextLine()){
@@ -31,11 +35,11 @@ public class DiscordBot{
         } catch (FileNotFoundException e) {
           System.err.println("Unable to find file: " + fileName + ".txt");
           System.exit(1);
+        } catch (IOException e) {
+            System.err.println("An error occurred when attempting to get current file path.");
         }
         return null;
     }
-
-
 
     public static void main(String[] args) throws InterruptedException {
         String APIkey = getAPIKey("APIkey");
