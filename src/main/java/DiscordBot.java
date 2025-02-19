@@ -30,7 +30,6 @@ public class DiscordBot{
             return APIkey;
         } catch (FileNotFoundException e) {
           System.err.println("Unable to find file: " + fileName + ".txt");
-          e.printStackTrace();
           System.exit(1);
         }
         return null;
