@@ -22,20 +22,4 @@
         </dependency>
     </dependencies>
 
-<!--    <dependencies>-->
-<!--        <dependency>-->
-<!--            <groupId>net.dv8tion</groupId>-->
-<!--            <artifactId>JDA</artifactId>-->
-<!--            <version>$version</version> &lt;!&ndash; replace $version with the latest version &ndash;&gt;-->
-<!--            &lt;!&ndash; Optionally disable audio natives to reduce jar size by excluding `opus-java`-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>club.minnced</groupId>-->
-<!--                    <artifactId>opus-java</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--            &ndash;&gt;-->
-<!--        </dependency>-->
-<!--    </dependencies>-->
-
 </project>

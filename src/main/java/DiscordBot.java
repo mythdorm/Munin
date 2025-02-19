@@ -54,12 +54,6 @@ public class DiscordBot{
             guild.upsertCommand("fart", "do fart").queue();
             guild.upsertCommand("alert", "Alert those present of my presence").queue();
         }
-//        try {
-//            Objects.requireNonNull(bot.getGuildById()).upsertCommand("fart", "Do fart").queue();
-//        } catch (NullPointerException e) {
-//            System.err.println("An error occurred when attempting to upsert a command");
-//        }
-
     }
 
 
